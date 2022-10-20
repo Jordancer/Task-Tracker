@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task Tracker</title>
+  </head>
+  <!-- List tags and a text field will populate with text when we add delete tasks -->
+  <body>
+    <div class="gradient" id="box">
+      <div class="container">
+        <h2>Task Manager</h2>
+        <p class="main">
+          <label for="newTask" class="middle"></label><br>
+          <input id="newTask" type="text" /><button id="addTask">Add Task</button><br>
+        </p>
+
+        <h3 class="middle">To-Do</h3>
+        <ul id="incomplete"></ul>
+
+        <h3 class="middle">To-Done</h3>
+        <ul id="done"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
