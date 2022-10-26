@@ -1,29 +1,26 @@
-// //-------------------------------ADD TASK----------------------------------------------------//
+const express = require("express");
+const app = express();
 
-// let taskInput = document.getElementById("newTask")
-// //-------------------------------BUTTON----------------------------------------------------//
+let newTask = document.getElementById("newTask");
+let addTask = document.getElementById("addTask");
+let incomplete = document.getElementById("incomplete");
+let done = document.getElementById("done");
+let box = document.getElementById("box");
 
-// let addButton = document.getElementById("button")
-
-// //-------------------------------INCOMPLETE LIST----------------------------------------------------//
-
-// let incompleteTasks = document.getElementById("incomplete")
-// //-------------------------------DONE LIST----------------------------------------------------//
-
-// let completeTasks = document.getElementById("done")
-// //-------------------------------JSON----------------------------------------------------//
-const fs = require("fs");
-fs.readFile("./task.JSON", "utf8", (err, jsonString) => {
-  if (err) {
-    console.log(`File Read Failed:${err}`);
-    return;
-  }
-  console.log("File Data:", jsonString);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formValidation();
 });
 
-// addButton.addEventListener("click",() =>{
-//     data = {
-//         "newTask":newTask.value,
-//     }
+let formValidation = () => {
+  if (textInput.value === "") {
+    console.log("failure");
+    msg.innerHTML = "Task cannot be blank";
+  } else {
+    console.log("success");
+    msg.innerHTML = "";
+  }
+};
 
-// })
+
+app.listen(3000, () => console.log("server up & running..."));
